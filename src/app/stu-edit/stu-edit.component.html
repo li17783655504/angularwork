@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h2 class="sub-header">编辑学生</h2>
+        <div class="table-responsive">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">姓名</label>
+              <input [(ngModel)]="editname" name="editname1"
+              type="name" class="form-control" id="exampleInputEmail1" placeholder="name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">学号</label>
+              <input [(ngModel)]="editid" name="editid1"
+              type="id" class="form-control" id="exampleInputEmail1" placeholder="id">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">性别</label>
+              <input [(ngModel)]="editsex" name="editsex1"
+              type="sex" class="form-control" id="exampleInputPassword1" placeholder="sex">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">职位</label>
+                <input [(ngModel)]="editposition" name="editposition1"
+                type="position" class="form-control" id="exampleInputPassword1" placeholder="position">
+              </div>
+            <button routerLink="/student" (click)="editstudent()"
+            type="submit" class="btn btn-info">创建</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,27 @@
+ <div class="table-responsive">
+    <a class="btn btn-success pull-right" routerLink="/new">新增学生</a>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>学号</th>
+          <th>性别</th>
+          <th>职位</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{student.name}}</td>
+          <td>{{student.stuid}}</td>
+          <td>{{student.sex}}</td>
+          <td>{{student.position}}</td>
+          <td>
+            <a [routerLink]="['/edit',student.id]">编辑</a>
+            <a href=""(click)="delstudent($event,student.id)">删除</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
